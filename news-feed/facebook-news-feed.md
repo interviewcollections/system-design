@@ -1,5 +1,7 @@
 # Facebook News Feed
 
+Facebook Timeline: Fanout read
+
 ## Fanout method
 
 **Fanout write = Megafeed**
@@ -10,6 +12,10 @@ Pro:
 
 * just one thing to read
 * we can do pre-rank.
+
+Con:
+
+* If you have N friends, your post will be repeatedly wrote N times. It's time and space comsuming.
 
 **Fanout read = Multifeed**
 
@@ -50,6 +56,10 @@ Facebook chose Fanout read \(Multifeed\).
 
 ![](../.gitbook/assets/image%20%2824%29%20%281%29%20%281%29.png)
 
+## Question
+
+* If FB is using fanout read for news feed generation, how does it handle new posts?
+
 ## Reference
 
 1. Facebook News Feed: Social Data at Scale \(NOV 26, 2012\)
@@ -60,4 +70,5 @@ Facebook chose Fanout read \(Multifeed\).
    1. Video: [https://www.infoq.com/presentations/Scale-at-Facebook/](https://www.infoq.com/presentations/Scale-at-Facebook/)
 3. Scalling Memcache at Facebook
    1. [https://www.usenix.org/sites/default/files/conference/protected-files/nishtala\_nsdi13\_slides.pdf](https://www.usenix.org/sites/default/files/conference/protected-files/nishtala_nsdi13_slides.pdf)
+4. [Serving Facebook Multifeed: Efficiency, performance gains through redesign](https://engineering.fb.com/2015/03/10/production-engineering/serving-facebook-multifeed-efficiency-performance-gains-through-redesign/)
 
